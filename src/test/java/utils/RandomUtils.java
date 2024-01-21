@@ -48,18 +48,17 @@ public class RandomUtils {
     }
 
     public String getRandomCity(String value) {
-        String city = new String();
         switch (value) {
             case "NCR":
-                city = faker.options().option("Delhi", "Gurgaon", "Noida");
+                return faker.options().option("Delhi", "Gurgaon", "Noida");
             case "Uttar Pradesh":
-                city = faker.options().option("Agra", "Lucknow", "Merrut");
+                return faker.options().option("Agra", "Lucknow", "Merrut");
             case "Haryana":
-                city = faker.options().option("Karnal", "Panipat");
+                return faker.options().option("Karnal", "Panipat");
             case "Rajasthan":
-                city = faker.options().option("Jaipur", "Jaiselmer");
+                return faker.options().option("Jaipur", "Jaiselmer");
         }
-        return city;
+        return "Not_Found";
     }
 
 }
