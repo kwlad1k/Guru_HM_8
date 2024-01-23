@@ -7,7 +7,6 @@ import static utils.RandomUtils.*;
 
 public class TestData {
 
-
     Faker faker = new Faker();
     RandomUtils randomUtils = new RandomUtils();
 
@@ -16,13 +15,15 @@ public class TestData {
             userEmail = faker.internet().emailAddress(),
             userGender = getRandomGender(),
             userPhoneNubmer = faker.phoneNumber().subscriberNumber(10),
-            dayRandom = Integer.toString(getRandomInt(10, 20)),
+            setDayRandom = randomUtils.generateDayRandom,
+            dayRandom = ((Integer.parseInt(setDayRandom) < 10) ? "00" + setDayRandom : "0" + setDayRandom),
             monthRandom = getRandomMonth(),
             yearRandom = Integer.toString((getRandomInt(1940, 2005))),
             usersubjects = getRandomSubjects(),
             userHobbies = getRandomHobbies(),
             currentAddress = faker.address().fullAddress(),
-            randomState = getRandomState(),
-            randomCity = randomUtils.getRandomCity(getRandomState());
+            randomState = faker.options().option("NCR",
+                    "Uttar Pradesh", "Haryana", "Rajasthan"),
+            randomCity = randomUtils.getRandomCity(randomState);
 }
 

@@ -32,19 +32,15 @@ public class RandomUtils {
         return genders[index];
     }
 
+    public String generateDayRandom = Integer.toString(faker.number().numberBetween(1, 31));
+
     public static String getRandomMonth() {
-        String[] genders = {"Januaray", "February", "March",
+        String[] genders = {"January", "February", "March",
                 "April", "May", "June", "July",
                 "August", "September", "October", "November",
                 "December"};
         int index = getRandomInt(0, genders.length - 1);
         return genders[index];
-    }
-
-    public static String getRandomState() {
-        String[] state = {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
-        int index = getRandomInt(0, state.length - 1);
-        return state[index];
     }
 
     public String getRandomCity(String value) {

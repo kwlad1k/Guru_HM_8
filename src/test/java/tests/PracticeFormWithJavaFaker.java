@@ -30,7 +30,7 @@ public class PracticeFormWithJavaFaker extends TestBase {
                 .checkResultResponsive("Student Email", testData.userEmail)
                 .checkResultResponsive("Gender", testData.userGender)
                 .checkResultResponsive("Mobile", testData.userPhoneNubmer)
-                .checkResultResponsive("Date of Birth", testData.dayRandom + " " + testData.monthRandom + "," + testData.yearRandom)
+                .checkResultResponsive("Date of Birth", testData.setDayRandom + " " + testData.monthRandom + "," + testData.yearRandom)
                 .checkResultResponsive("Subjects", testData.usersubjects)
                 .checkResultResponsive("Hobbies", testData.userHobbies)
                 .checkResultResponsive("Picture", "kek.png")
