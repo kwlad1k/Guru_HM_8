@@ -14,7 +14,7 @@ public class TestData {
             lastName = faker.name().lastName(),
             userEmail = faker.internet().emailAddress(),
             userGender = getRandomGender(),
-            userPhoneNubmer = faker.phoneNumber().subscriberNumber(10),
+            userPhoneNumber = faker.phoneNumber().subscriberNumber(10),
             setDayRandom = randomUtils.generateDayRandom,
             dayRandom = ((Integer.parseInt(setDayRandom) < 10) ? "00" + setDayRandom : "0" + setDayRandom),
             monthRandom = getRandomMonth(),

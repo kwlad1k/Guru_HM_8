@@ -16,7 +16,7 @@ public class PracticeFormWithJavaFaker extends TestBase {
                 .setLastName(testData.lastName)
                 .setUserEmail(testData.userEmail)
                 .setGender(testData.userGender)
-                .setPhoneNubmer(testData.userPhoneNubmer)
+                .setPhoneNubmer(testData.userPhoneNumber)
                 .setDateOfBirth(testData.dayRandom, testData.monthRandom, testData.yearRandom)
                 .setUserSubjects(testData.usersubjects)
                 .setUserHobbies(testData.userHobbies)
@@ -29,7 +29,7 @@ public class PracticeFormWithJavaFaker extends TestBase {
         registrationPage.checkResultResponsive("Student Name", testData.firstName + " " + testData.lastName)
                 .checkResultResponsive("Student Email", testData.userEmail)
                 .checkResultResponsive("Gender", testData.userGender)
-                .checkResultResponsive("Mobile", testData.userPhoneNubmer)
+                .checkResultResponsive("Mobile", testData.userPhoneNumber)
                 .checkResultResponsive("Date of Birth", testData.setDayRandom + " " + testData.monthRandom + "," + testData.yearRandom)
                 .checkResultResponsive("Subjects", testData.usersubjects)
                 .checkResultResponsive("Hobbies", testData.userHobbies)
@@ -44,12 +44,12 @@ public class PracticeFormWithJavaFaker extends TestBase {
                 .setFirstName(testData.firstName)
                 .setLastName(testData.lastName)
                 .setGender(testData.userGender)
-                .setPhoneNubmer(testData.userPhoneNubmer)
+                .setPhoneNubmer(testData.userPhoneNumber)
                 .clickSubmitButton();
 
         registrationPage.checkResultResponsive("Student Name", testData.firstName + " " + testData.lastName)
                 .checkResultResponsive("Gender", testData.userGender)
-                .checkResultResponsive("Mobile", testData.userPhoneNubmer);
+                .checkResultResponsive("Mobile", testData.userPhoneNumber);
     }
 
     @Test
