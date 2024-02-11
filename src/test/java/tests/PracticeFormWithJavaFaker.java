@@ -16,7 +16,7 @@ public class PracticeFormWithJavaFaker extends TestBase {
                 .setLastName(testData.lastName)
                 .setUserEmail(testData.userEmail)
                 .setGender(testData.userGender)
-                .setPhoneNubmer(testData.userPhoneNumber)
+                .setPhoneNumber(testData.userPhoneNumber)
                 .setDateOfBirth(testData.dayRandom, testData.monthRandom, testData.yearRandom)
                 .setUserSubjects(testData.usersubjects)
                 .setUserHobbies(testData.userHobbies)
@@ -44,7 +44,7 @@ public class PracticeFormWithJavaFaker extends TestBase {
                 .setFirstName(testData.firstName)
                 .setLastName(testData.lastName)
                 .setGender(testData.userGender)
-                .setPhoneNubmer(testData.userPhoneNumber)
+                .setPhoneNumber(testData.userPhoneNumber)
                 .clickSubmitButton();
 
         registrationPage.checkResultResponsive("Student Name", testData.firstName + " " + testData.lastName)
